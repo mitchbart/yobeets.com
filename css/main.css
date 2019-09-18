@@ -318,3 +318,31 @@ html {
 body {
   background: black;
   color: #f9ca24; }
+
+.hero {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .hero a {
+    display: contents; }
+
+.toplogo {
+  height: auto;
+  max-width: 720px;
+  width: 100%; }
+  .toplogo:hover g g path {
+    stroke: lime; }
+  .toplogo:hover g g .skull {
+    fill: red; }
+  .toplogo:hover g g .lazyskull {
+    fill: blue;
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+    -webkit-transform-origin: 100;
+    -ms-transform-origin: 100;
+    transform-origin: 100; }
