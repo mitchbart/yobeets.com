@@ -11,7 +11,12 @@ html {
 body {
   background: white;
   color: #333;
-  font-family: 'Ubuntu Mono', monospace; }
+  font-family: 'Ubuntu Mono', monospace; 
+  font-size: 16px
+}
+h1 {
+  color: #333;
+}
 
 .flex-body {
   display: -webkit-box;
@@ -35,8 +40,8 @@ body {
 .highlight {
   max-width: 100%;
   height: auto;
-  -webkit-filter: hue-rotate(70deg);
-  filter: hue-rotate(70deg); }
+  -webkit-filter: hue-rotate(10deg);
+  filter: hue-rotate(10deg); }
 
 .hero {
   color: red;
@@ -73,6 +78,20 @@ body {
     -ms-transform-origin: top left;
     transform-origin: top left; }
 
+
+/**
+completely necessary css candy
+**/
+.console {
+  background: #444;
+  color: lime;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/**  
+A N I M A T I O N S !!! 
+**/
 @-webkit-keyframes glitch {
   0% {
     stroke: yellow; }
