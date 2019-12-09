@@ -9,31 +9,41 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: white;
+  background: ffffff;
   color: #333;
   font-family: 'Ubuntu Mono', monospace; 
   font-size: 16px
 }
+
 h1 {
   color: #333;
 }
 
-.flex-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+/**
+ALL THINGS HERO
+**/
+.hero {
+  background-color: #2877D7;
+  line-height: 0;
+}
 
-.image-box {
+.main-logo {
+  padding: 20px;
+  background-color: #3BC454;
+  max-width: 840px;
+  height: auto;
+  width: 100%;
+}
+
+.stroke-effect:hover {
+  stroke: crimson;
+  stroke-dasharray: 10;
+  
+  animation: dash 1s ease-in-out infinite;
+  
+}
+
+/*.image-box {
   max-width: 100%;
   padding: 10px; }
 
@@ -44,7 +54,7 @@ h1 {
   filter: hue-rotate(10deg); }
 
 .hero {
-  color: red;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +66,7 @@ h1 {
 
 .toplogo {
   height: auto;
-  max-width: 720px;
+  max-width: 840px;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -66,7 +76,9 @@ h1 {
     -webkit-animation-duration: 150ms;
     animation-duration: 150ms;
     -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; }
+    animation-iteration-count: infinite; 
+    stroke: #fffc31;
+  }
   .toplogo:hover g g .skull {
     fill: springgreen; }
   .toplogo:hover g g .lazyskull {
@@ -77,6 +89,8 @@ h1 {
     -webkit-transform-origin: top left;
     -ms-transform-origin: top left;
     transform-origin: top left; }
+*/
+
 
 
 /**
@@ -115,3 +129,10 @@ A N I M A T I O N S !!!
     stroke: pink; }
   80% {
     stroke: red; } }
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 60;
+  }
+}
