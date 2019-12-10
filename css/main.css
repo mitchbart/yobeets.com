@@ -23,73 +23,68 @@ h1 {
 ALL THINGS HERO
 **/
 .hero {
-  background-color: #2877D7;
+  /* background-color: #2877D7; */
   line-height: 0;
+  border: 6px solid #333;
+  margin: 10px 0 10px 0;
 }
 
 .main-logo {
   padding: 20px;
-  background-color: #3BC454;
-  max-width: 840px;
+  /* background-color: grey; */
+  max-width: 420px;
   height: auto;
   width: 100%;
 }
 
-.stroke-effect:hover {
+.stroke-effect {
+  stroke: #333;
+  box-shadow: black;
+}
+
+.hero:hover .stroke-effect {
+    stroke: #444;
+    stroke-dasharray: 10;
+    animation: dash 1s ease-in-out infinite;
+    /* fill: black;
+    animation: glitch 69ms infinite; */
+}
+/* .stroke-effect:hover {
   stroke: crimson;
   stroke-dasharray: 10;
   
   animation: dash 1s ease-in-out infinite;
   
+} */
+
+
+/**
+GRID SETUP
+**/
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 200px;
+  gap: 3px;
 }
 
-/*.image-box {
-  max-width: 100%;
-  padding: 10px; }
 
-.highlight {
-  max-width: 100%;
-  height: auto;
-  -webkit-filter: hue-rotate(10deg);
-  filter: hue-rotate(10deg); }
+/**
+MAIN CONTENT STYLES
+**/
+.item {
+  background: #fafafa;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  font-size: 69px;
+  border: 6px solid #333;
+  border-radius: 4px;
+}
 
-.hero {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .hero a {
-    display: contents; }
-
-.toplogo {
-  height: auto;
-  max-width: 840px;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-  .toplogo:hover g g path {
-    -webkit-animation-name: glitch;
-    animation-name: glitch;
-    -webkit-animation-duration: 150ms;
-    animation-duration: 150ms;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; 
-    stroke: #fffc31;
-  }
-  .toplogo:hover g g .skull {
-    fill: springgreen; }
-  .toplogo:hover g g .lazyskull {
-    fill: black;
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    transform: rotate(359deg);
-    -webkit-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left; }
-*/
+.item:hover {
+  background: yellow;
+}
 
 
 
@@ -106,18 +101,6 @@ completely necessary css candy
 /**  
 A N I M A T I O N S !!! 
 **/
-@-webkit-keyframes glitch {
-  0% {
-    stroke: yellow; }
-  20% {
-    stroke: blue; }
-  40% {
-    stroke: lime; }
-  60% {
-    stroke: pink; }
-  80% {
-    stroke: red; } }
-
 @keyframes glitch {
   0% {
     stroke: yellow; }
@@ -128,7 +111,10 @@ A N I M A T I O N S !!!
   60% {
     stroke: pink; }
   80% {
-    stroke: red; } }
+    stroke: red; } 
+  100% {
+    stroke: yellow;}
+  }
 
 
 @keyframes dash {
