@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap");
 
+/**
+CSS CUSTOM PROPERTIES
+**/
+:root {
+  --black: #444;
+  --pink: #CA1551;
+  --red: #FB4D3D;
+  --green:#03CEA4;
+  --blue: #345995;
+  --yellow: #EAC435;
+}
+
+
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -10,7 +24,7 @@ html {
 
 body {
   background: ffffff;
-  color: #333;
+  color: var(--black);
   font-family: 'Ubuntu Mono', monospace; 
   font-size: 16px
 }
@@ -40,10 +54,11 @@ ALL THINGS HERO
 .stroke-effect {
   stroke: #333;
   box-shadow: black;
+  fill: #CA1551;
 }
 
-.hero:hover .stroke-effect {
-    stroke: #444;
+.hero .stroke-effect {
+    stroke: #FB4D3D;
     stroke-dasharray: 10;
     animation: dash 1s ease-in-out infinite;
     /* fill: black;
@@ -74,7 +89,7 @@ MAIN CONTENT STYLES
 **/
 .item {
   background: #fafafa;
-  font-weight: 900;
+  font-weight: 600;
   text-align: center;
   padding: 10px;
   font-size: 69px;
@@ -82,11 +97,21 @@ MAIN CONTENT STYLES
   border-radius: 4px;
 }
 
-.item:hover {
-  background: yellow;
+.item:hover, .fa-item:hover {
+  background: #EAC435;
 }
 
-
+/**
+FONT AWESOME SETTINGS
+**/
+.fa-item.fad {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #333;
+  border-radius: 4px;
+}
 
 /**
 completely necessary css candy
