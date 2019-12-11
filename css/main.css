@@ -20,7 +20,9 @@ html {
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+  border: 2px dotted red;
+}
 
 body {
   background: ffffff;
@@ -52,35 +54,34 @@ ALL THINGS HERO
 }
 
 .stroke-effect {
-  stroke: #333;
-  box-shadow: black;
-  fill: #CA1551;
+  stroke: var(--green);
+  /* fill: #444; */
 }
 
 .hero .stroke-effect {
-    stroke: #FB4D3D;
-    stroke-dasharray: 10;
-    animation: dash 1s ease-in-out infinite;
+  stroke-width: 3;
+    stroke-dasharray: 15;
+    animation: dash 2s ease-in-out infinite;
     /* fill: black;
     animation: glitch 69ms infinite; */
 }
-/* .stroke-effect:hover {
-  stroke: crimson;
-  stroke-dasharray: 10;
-  
-  animation: dash 1s ease-in-out infinite;
-  
-} */
 
+.hero:hover .stroke-effect {
+  stroke: var(--black);
+  stroke-width: 3;
+  animation: glitch 0.2s ease-in-out infinite;
+}
 
 /**
 GRID SETUP
 **/
 .container {
+  overflow: hidden;
+  height: 900px;
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 200px;
-  gap: 3px;
+  grid-template-columns:1fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 
@@ -91,7 +92,7 @@ MAIN CONTENT STYLES
   background: #fafafa;
   font-weight: 600;
   text-align: center;
-  padding: 10px;
+  padding: 25px;
   font-size: 69px;
   border: 6px solid #333;
   border-radius: 4px;
@@ -99,6 +100,24 @@ MAIN CONTENT STYLES
 
 .item:hover, .fa-item:hover {
   background: #EAC435;
+}
+
+.side-item {
+  /* grid-row: span 4; */
+  grid-row: 1 / -1;
+  display: flex;
+
+}
+
+/**
+IMAGE SETTINGS
+**/
+.side-logo {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  background: var(--blue);
+  
 }
 
 /**
@@ -128,17 +147,17 @@ A N I M A T I O N S !!!
 **/
 @keyframes glitch {
   0% {
-    stroke: yellow; }
+    fill: yellow; }
   20% {
-    stroke: blue; }
+    fill: blue; }
   40% {
-    stroke: lime; }
+    fill: lime; }
   60% {
-    stroke: pink; }
+    fill: pink; }
   80% {
-    stroke: red; } 
+    fill: red; } 
   100% {
-    stroke: yellow;}
+    fill: yellow;}
   }
 
 

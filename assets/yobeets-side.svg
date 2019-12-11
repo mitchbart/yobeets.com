@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="95.177mm" height="26.118mm" version="1.1" viewBox="0 0 95.177 26.118" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg width="26.118mm" height="95.177mm" version="1.1" viewBox="0 0 26.118 95.177" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata>
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -10,8 +10,8 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <g transform="translate(-47.538,-100.61)">
-  <g fill="#fff" stroke="#03f9c0" stroke-width="3" style="paint-order:markers stroke fill" aria-label="yobeets">
+ <g transform="translate(-81.955 -65.968)">
+  <g transform="rotate(-90 95.014 113.67)" fill="#fff" stroke="#03f9c0" stroke-width="3" style="paint-order:markers stroke fill" aria-label="yobeets">
    <path d="m60.976 106.94h-4.953v8.509s-0.254 0.127-0.762 0.127c-0.762 0-1.27-0.508-1.27-1.27v-7.366h-4.953v7.366c0 3.175 2.159 5.334 5.715 5.334 0.762 0 1.27-0.127 1.27-0.127v0.254s-0.381 1.397-2.286 1.397c-1.524 0-2.413-0.635-2.413-0.635l-1.8034 3.302s1.6764 1.397 4.7244 1.397c4.191 0 6.731-2.54 6.731-5.7404z" style="paint-order:markers stroke fill"/>
    <path d="m68.342 113.42c0-2.032 0.889-2.921 1.524-2.921s1.524 0.889 1.524 2.921-0.889 2.921-1.524 2.921-1.524-0.889-1.524-2.921zm-5.08 0c0 4.191 2.794 6.985 6.604 6.985s6.604-2.794 6.604-6.985-2.794-6.985-6.604-6.985-6.604 2.794-6.604 6.985z" style="paint-order:markers stroke fill"/>
    <path d="m83.836 102.11h-4.953v17.526s2.413 0.762 5.715 0.762c4.064 0 6.858-2.794 6.858-6.858s-2.794-6.858-6.35-6.858c-0.762 0-1.27 0.127-1.27 0.127zm0 8.763s0.254-0.127 0.762-0.127c0.889 0 1.778 0.889 1.778 2.794s-0.889 2.794-1.778 2.794c-0.508 0-0.762-0.127-0.762-0.127z" style="paint-order:markers stroke fill"/>
