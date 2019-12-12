@@ -10,9 +10,9 @@ CSS CUSTOM PROPERTIES
   --green:#03CEA4;
   --blue: #345995;
   --yellow: #EAC435;
+
+  --border: 4px solid #444;
 }
-
-
 
 html {
   -webkit-box-sizing: border-box;
@@ -21,29 +21,51 @@ html {
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; 
-  border: 2px dotted red;
+  /* border: 2px dotted red; */
 }
 
+
+/**
+LAYOUT GENERAL
+**/
 body {
-  background: ffffff;
+  background: #fefefe;
   color: var(--black);
   font-family: 'Ubuntu Mono', monospace; 
   font-size: 16px
 }
 
 h1 {
-  color: #333;
+  /* color: #333; */
+}
+
+/**
+ANCHOR STYLES
+**/
+.no-deco {
+  text-decoration: none;
+  color: inherit;
+}
+.a-light {
+  color: lightgray;
 }
 
 /**
 ALL THINGS HERO
 **/
 .hero {
-  /* background-color: #2877D7; */
-  line-height: 0;
-  border: 6px solid #333;
-  margin: 10px 0 10px 0;
+  /* line-height: 0; */
+  border: var(--border);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+/* .hero, a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+} */
+
 
 .main-logo {
   padding: 20px;
@@ -54,34 +76,47 @@ ALL THINGS HERO
 }
 
 .stroke-effect {
-  stroke: var(--green);
-  /* fill: #444; */
+  stroke: var(--yellow);
+   fill: #444; 
 }
 
 .hero .stroke-effect {
-  stroke-width: 3;
-    stroke-dasharray: 15;
-    animation: dash 2s ease-in-out infinite;
-    /* fill: black;
-    animation: glitch 69ms infinite; */
+  stroke-dasharray: 15;
+  animation: dash 2s ease-in-out infinite;
+  /* fill: black;
+  animation: glitch 69ms infinite; */
 }
 
 .hero:hover .stroke-effect {
   stroke: var(--black);
-  stroke-width: 3;
   animation: glitch 0.2s ease-in-out infinite;
+}
+.hero:hover .hero-icon {
+  animation: glitch-fa 1s ease-in-out infinite;;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.subtitle .subtext {
+  font-size: 50px;
+  color: var(--red);
 }
 
 /**
 GRID SETUP
 **/
 .container {
-  overflow: hidden;
-  height: 900px;
+  /* overflow: hidden; */
+  /* height: 900px; */
   display: grid;
-  grid-template-columns:1fr 2fr 2fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  /* grid-template-columns:1fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 
@@ -89,58 +124,83 @@ GRID SETUP
 MAIN CONTENT STYLES
 **/
 .item {
-  background: #fafafa;
+  background: var(--blue);
+  color: #fefefe;
   font-weight: 600;
   text-align: center;
   padding: 25px;
   font-size: 69px;
-  border: 6px solid #333;
-  border-radius: 4px;
+  border: var(--border);
 }
 
 .item:hover, .fa-item:hover {
-  background: #EAC435;
+  background:var(--red);
+  /* padding: 200px; */
 }
 
-.side-item {
-  /* grid-row: span 4; */
+/* .side-item {
+  grid-row: span 4;
   grid-row: 1 / -1;
   display: flex;
+} */
 
+
+/**
+FOOTER 
+**/
+.footer-container {
+  background: var(--black);
+  margin-top: 40px;
+  border-top: 10px solid #333;
+  padding: 20px;
+  color: #fefefe;
 }
+.footer-logo {
+  width: 100%;
+  max-width: 300px;
+}
+
 
 /**
 IMAGE SETTINGS
 **/
-.side-logo {
+/* .side-logo {
   height: auto;
   width: 100%;
+  min-width: 169px;
   padding: 20px;
   background: var(--blue);
-  
-}
+} */
+
+
 
 /**
 FONT AWESOME SETTINGS
 **/
+.hero-icon {
+  font-size: 100px;
+}
+
 .fa-item.fad {
   font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 6px solid #333;
-  border-radius: 4px;
 }
 
+.footer-icon {
+  font-size: 30px;
+  padding-right: 10px;
+}
 /**
 completely necessary css candy
 **/
-.console {
+/* .console {
   background: #444;
   color: lime;
   padding: 2px 4px;
   border-radius: 2px;
-}
+} */
 
 /**  
 A N I M A T I O N S !!! 
@@ -161,8 +221,46 @@ A N I M A T I O N S !!!
   }
 
 
+@keyframes glitch-fa {
+  0% {
+    --fa-secondary-color: yellow; }
+  20% {
+    --fa-secondary-color: blue; }
+  40% {
+    --fa-secondary-color: lime; }
+  60% {
+    --fa-secondary-color: pink; }
+  80% {
+    --fa-secondary-color: red; } 
+  100% {
+    --fa-secondary-color: yellow;}
+  }
+
 @keyframes dash {
   to {
     stroke-dashoffset: 60;
   }
 }
+
+
+
+/**
+ALL MEDIA QUERIES
+**/
+@media (max-width: 800px) {
+  body {
+    background-color: lightblue;
+  }
+  .subtitle {
+    flex-direction: column;
+    text-align: center;
+  }
+  .subtitle .subtext {
+    font-size: 34px;
+  }
+  .hero-icon {
+    font-size: 60px;
+  }
+}
+
+
